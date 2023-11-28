@@ -19,7 +19,7 @@ cd britelin
 Compile the program using `go build`:
 
 ```bash
-make all
+go build -p=2 -ldflags="-s -w" -gcflags="all=-N -l" britelin.go 
 ```
 
 ## Usage
@@ -56,7 +56,7 @@ Ensure you have already built the `britelin` program as described in the previou
 ```bash
 git clone https://github.com/shamspathan/britelin.git
 cd britelin
-make build
+go build -p=2 -ldflags="-s -w" -gcflags="all=-N -l" britelin.go 
 sudo mv britelin /usr/local/bin
 ```
 

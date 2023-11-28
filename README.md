@@ -56,7 +56,7 @@ Ensure you have already built the `lightup` program as described in the previous
 ```bash
 git clone https://github.com/shamspathan/lightup.git
 cd lightup
-go build -o lightup main.go
+make build
 sudo mv lightup /usr/local/bin
 ```
 

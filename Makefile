@@ -1,6 +1,5 @@
 build:
-	go build -p=2 -ldflags="-s -w" -gcflags="all=-N -l" lightup.go 
+	go build -p=2 -ldflags="-s -w" -gcflags="all=-N -l" britelin.go 
 install: build
-	sudo chown root lightup
-	sudo chmod u+s lightup
+	sudo chown root britelin
 all:	build install

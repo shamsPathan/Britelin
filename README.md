@@ -1,4 +1,4 @@
-# LightUp
+# britelin
 
 This repository contains a Go program that adjusts the brightness of the backlight on your system.
 
@@ -10,8 +10,8 @@ This repository contains a Go program that adjusts the brightness of the backlig
 ## Clone the Repository
 
 ```bash
-git clone https://github.com/shamspathan/lightup.git
-cd lightup
+git clone https://github.com/shamspathan/britelin.git
+cd britelin
 ```
 
 ## Installation
@@ -27,7 +27,7 @@ make all
 Run the program with the value you want to add or subtract from the current brightness:
 
 ```bash
-./lightup <value_to_add>
+sudo ./britelin <value_to_add>
 ```
 
 - Replace `<value_to_add>` with the numeric value by which you want to adjust the brightness.
@@ -37,10 +37,10 @@ Example:
 
 ```bash
 # Increase brightness by 10
-./lightup 10
+sudo ./britelin 10
 
 # Decrease brightness by 5
-./lightup -5
+sudo ./britelin -5
 ```
 
 ### Note:
@@ -49,15 +49,15 @@ Example:
 
 ### Integrating with i3wm (i3 Window Manager)
 
-#### Step 1: Build and Install LightUp
+#### Step 1: Build and Install britelin
 
-Ensure you have already built the `lightup` program as described in the previous sections. If not, follow these steps:
+Ensure you have already built the `britelin` program as described in the previous sections. If not, follow these steps:
 
 ```bash
-git clone https://github.com/shamspathan/lightup.git
-cd lightup
+git clone https://github.com/shamspathan/britelin.git
+cd britelin
 make build
-sudo mv lightup /usr/local/bin
+sudo mv britelin /usr/local/bin
 ```
 
 #### Step 2: Configure i3wm
@@ -67,11 +67,11 @@ sudo mv lightup /usr/local/bin
 2. Add the following lines to the configuration file:
 
 ```bash
-bindsym XF86MonBrightnessDown exec lightup -10
-bindsym XF86MonBrightnessUp exec lightup 10
+bindsym XF86MonBrightnessDown exec britelin -10
+bindsym XF86MonBrightnessUp exec britelin 10
 ```
 
-These lines bind the `XF86MonBrightnessDown` and `XF86MonBrightnessUp` keys (typically used for brightness adjustment on keyboards) to execute the `lightup` program with the specified brightness adjustments (`-10` for decrease, `10` for increase).
+These lines bind the `XF86MonBrightnessDown` and `XF86MonBrightnessUp` keys (typically used for brightness adjustment on keyboards) to execute the `britelin` program with the specified brightness adjustments (`-10` for decrease, `10` for increase).
 
 #### Step 3: Reload i3wm Configuration
 
@@ -81,7 +81,7 @@ Press `Mod+Shift+R` to reload the i3wm configuration.
 
 #### Usage:
 
-After integrating `lightup` with i3wm, you can now use the designated brightness adjustment keys (usually the function keys related to brightness on your keyboard) to adjust the brightness level within the i3wm environment.
+After integrating `britelin` with i3wm, you can now use the designated brightness adjustment keys (usually the function keys related to brightness on your keyboard) to adjust the brightness level within the i3wm environment.
 
 For example:
 
@@ -90,7 +90,7 @@ For example:
 
 #### Notes:
 
-- Ensure the `lightup` program is in the system's path (`/usr/local/bin`) for i3wm to execute it correctly.
+- Ensure the `britelin` program is in the system's path (`/usr/local/bin`) for i3wm to execute it correctly.
 - Adjust the `-10` and `10` values in the i3wm configuration to change the brightness adjustment step size according to your preference.
 
 
